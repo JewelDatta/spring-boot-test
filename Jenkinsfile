@@ -1,14 +1,14 @@
 pipeline {
     agent {
         docker {
-          image 'maven:3.8.6-jdk-11' 
+          image 'abhishekf5/maven-abhishek-docker-agent' 
         }
     }
     stages {
         stage('Checkout') {
             steps {
                 sh 'echo checkout stage'
-                git branch: 'main', url: 'https://github.com/JewelDatta/spring-boot-test    '
+                git branch: 'main', url: 'https://github.com/JewelDatta/spring-boot-test'
             }
         }
         
